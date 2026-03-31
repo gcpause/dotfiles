@@ -1,0 +1,8 @@
+WRN 2026-03-19T16:07:48.993 ?.603      server_start:199: Failed to start server: read-only file system: /run/user/1000/nvim.603.0
+WRN 2026-03-19T16:07:55.283 ?.603      server_start:199: Failed to start server: read-only file system: /run/user/1000/nvim.603.0
+WRN 2026-03-19T16:08:07.835 ?.603      server_start:199: Failed to start server: read-only file system: /run/user/1000/nvim.603.0
+WRN 2026-03-19T16:11:41.176 ?.603      server_start:199: Failed to start server: read-only file system: /run/user/1000/nvim.603.0
+WRN 2026-03-19T16:12:25.634 ?.603      server_start:199: Failed to start server: read-only file system: /run/user/1000/nvim.603.0
+WRN 2026-03-19T16:13:24.874 ?.603      server_start:199: Failed to start server: read-only file system: /run/user/1000/nvim.603.0
+WRN 2026-03-19T16:14:04.528 ?.603      server_start:199: Failed to start server: read-only file system: /run/user/1000/nvim.603.0
+WRN 2026-03-19T16:14:40.090 ?.603      server_start:199: Failed to start server: read-only file system: /run/user/1000/nvim.603.0
