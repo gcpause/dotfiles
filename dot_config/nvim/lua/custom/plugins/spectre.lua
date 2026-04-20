@@ -8,6 +8,12 @@ return {
         replace = {
           cmd = 'sed',
         },
+        exclude = {
+          'node_modules/**',
+          'dist/**',
+          '.git/**',
+          'target/**',
+        },
       },
     }
 

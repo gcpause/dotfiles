@@ -12,7 +12,7 @@ return {
         -- https://code.claude.com/docs/en/permissions#read-and-edit
         tmp_dir = './99-tmp',
 
-        model = 'alto-studio-claude/claude-opus-4-6',
+        model = 'anthropic/claude-sonnet-4-6',
 
         --- Completions: #rules and @files in the prompt buffer
         completion = {

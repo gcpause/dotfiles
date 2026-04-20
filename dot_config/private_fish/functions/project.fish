@@ -1,23 +1,32 @@
-function project -d "cd into an aixigo-platform or aixigo-solutions project"
+function project -d "cd into a project directory"
+    # Default to empty if not set
+    set -q PROJECT_DIRS; or begin
+        echo "PROJECT_DIRS not set. Set it with:"
+        echo "  set -Ux PROJECT_DIRS ~/path/to/projects1 ~/path/to/projects2"
+        return 1
+    end
+
     if test (count $argv) -eq 0
         echo "Usage: project <project-name>"
-        echo "Available projects in aixigo-platform:"
-        ls ~/export/aixigo-platform/
         echo ""
-        echo "Available projects in aixigo-solutions:"
-        ls ~/export/aixigo-solutions/
+        for dir in $PROJECT_DIRS
+            if test -d $dir
+                echo "Available projects in $dir:"
+                ls $dir
+                echo ""
+            end
+        end
         return 1
     end
 
-    set -l dir_platform ~/export/aixigo-platform/$argv[1]
-    set -l dir_solutions ~/export/aixigo-solutions/$argv[1]
-
-    if test -d $dir_platform
-        cd $dir_platform
-    else if test -d $dir_solutions
-        cd $dir_solutions
-    else
-        echo "Project '$argv[1]' not found in aixigo-platform or aixigo-solutions"
-        return 1
+    for dir in $PROJECT_DIRS
+        set -l project_path $dir/$argv[1]
+        if test -d $project_path
+            cd $project_path
+            return 0
+        end
     end
+
+    echo "Project '$argv[1]' not found in: $PROJECT_DIRS"
+    return 1
 end
