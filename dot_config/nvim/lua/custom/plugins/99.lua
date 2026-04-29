@@ -17,7 +17,7 @@ return {
         --- Completions: #rules and @files in the prompt buffer
         completion = {
           --- What autocomplete engine to use. Defaults to native (built-in) if not specified.
-          source = 'cmp', -- "native" (default), "cmp", or "blink"
+          source = 'blink', -- "native" (default), "cmp", or "blink"
         },
 
         md_files = {

@@ -26,7 +26,7 @@ return {
         vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ts', ":lua require('jdtls.tests').goto_subjects()<CR>", opts)
       end
 
-      local root_dir = require('jdtls.setup').find_root({ '.git', 'mvnw' })
+      local root_dir = require('jdtls.setup').find_root { '.git', 'mvnw' }
 
       local config = {
         root_dir = root_dir,
@@ -44,9 +44,7 @@ return {
         },
         init_options = {
           bundles = vim.split(vim.fn.glob(vim.env.MASON .. '/share/java-*/*.jar'), '\n'),
-          extendedClientCapabilities = {
-            progressReportProvider = false,
-          },
+          extendedClientCapabilities = require('jdtls').extendedClientCapabilities,
         },
         settings = {
           java = {
